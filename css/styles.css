@@ -50,7 +50,8 @@ span.studio{
     text-align: center;
 }
 
-.button{
+.button,
+.form-btn{
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-size: 16px;
@@ -65,11 +66,17 @@ span.studio{
     display: block;
     margin: auto;
     min-width: 169px;
+    min-height: 56px;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button:hover,
 .button:focus{
+    background-color: #404bbf;
+}
+
+.form-btn:hover,
+.form-btn:focus{
     background-color: #404bbf;
 }
 
@@ -540,8 +547,73 @@ footer .social-icon{
     height: 40px;
 }
 
+.footer-form {
+   margin-left: auto;
+}
+.footer-cap{
+    color: #FFF;
+        font-family: Roboto;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 0.32px;
+        outline: none;
+        margin-bottom: 16px;
+}
 
-/* .backdrop{
+.form-subscribe {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.subscribe-form-field {
+    color: #FFF;
+}
+
+.subscribe-form-input {
+    width: 264px;
+    height: 40px;
+    border-radius: 4px;
+        border: 1px solid var(--WHITE, #FFF);
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+        background-color: transparent;
+        outline: transparent;
+        padding: 8px 16px;
+}
+.subscribe-form-input::placeholder{
+    color: #FFF;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: -0.04em;
+}
+
+.subscribe-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 8px 24px;
+    color: #FFF;
+    outline: none;
+    text-align: center;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.06em;
+    border-radius: 4px;
+    background:  #4D5AE5;
+            
+}
+
+.subscribe-icon {
+    fill: #ffffff;
+}
+
+
+
+
+ .backdrop {
     position: fixed;
     top: 0;
     left: 0;
@@ -549,4 +621,197 @@ footer .social-icon{
     width: 100%;
     height: 100%;
     z-index: 999;
-} */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 300ms ease-in, visibility 300ms ease-in;
+} 
+
+.backdrop.is-open{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: initial;
+} 
+
+.modal {
+    position: relative;
+    border-radius: 4px;
+    background-color: #FCFCFC;
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 
+    0px 1px 3px 0px rgba(0, 0, 0, 0.12),
+    0px 2px 1px 0px rgba(0, 0, 0, 0.20);
+    width: 408px;
+    min-height: 584px;
+    padding: 72px 24px 24px 24px;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-btn {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 24px;
+    height: 24px;
+    border-radius: 50%;
+
+    color: #2e2f42;
+    background-color: #e7e9fc;
+    background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(0, 0, 0, 0.1) ;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-btn:hover,
+.modal-btn:focus{
+    background-color: #404bbf;
+    border: none;
+    fill: #ffffff;
+}
+
+.modal-btn-icon {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    stroke: currentColor;
+}
+
+.modal-cap {
+    color: #2e2f42;
+    text-align: center;
+    font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: -0.03em;
+        width: 360px;
+        margin-bottom: 16px;
+}
+
+
+
+.form-label{
+    display: block;
+    margin-bottom: 4px;
+    color:  #8E8F99;
+        font-family: Roboto;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 14px;
+        letter-spacing: -0.04em;
+}
+
+.form-field {
+    position: relative;
+    margin-bottom: 8px;
+}
+.form-input{
+    width: 100%;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid  rgba(46, 47, 66, 0.40);
+    outline: none;
+    padding-left: 38px;
+
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-input:focus {
+    border-color: #4D5AE5;
+}
+.form-icon{
+    position: absolute;
+    top: 50% ;
+    left: 16px ;
+    transform: translateY(-50%);
+    fill: #2E2F42;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input:focus + .form-icon{
+    fill: #4D5AE5;
+}
+
+
+
+ .form-message{
+    resize: none;
+    width: 100%;
+    height: 120px;
+    border-radius: 4px;
+    border: 1px solid rgba(46, 47, 66, 0.40);
+    outline: none;
+    font-size: 12px;
+    letter-spacing: -0.04em;
+    line-height: 14px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding-left: 16px;
+    padding-top: 8px;
+ }
+ .form-message::placeholder{
+    color: rgba(46, 47, 66, 0.40);
+ }
+ .form-message:focus{
+    border-color: #4D5AE5;
+ }
+
+ .form-agreement {
+    display: block;
+    margin-bottom: 24px;
+
+    color:  #8E8F99;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: -0.04em;
+
+    user-select: none;
+ }
+
+
+ .form-agreement-checkbox {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 16px;
+    height: 16px;
+
+    stroke-width: 1px;
+    stroke: rgba(46, 47, 66, 0.40);
+
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    cursor: pointer;
+ }
+
+.checkbox:checked + .form-agreement-checkbox{
+     background-color: #404bbf;
+     border-color: #404bbf;
+}
+
+.checkbox:checked+.form-agreement-checkbox > .form-agreement-icon{
+    opacity: 1;
+    transform: scale(1);
+}
+
+ .form-agreement-icon {
+    opacity: 0;
+    fill: #f4f4fd;
+    transform: scale(0.3);
+    transition: opacity 250ms cubic-bezier(0.8, 0, 0, 1.8) 150ms, 
+    transform 250ms cubic-bezier(0.8, 0, 0, 1.8) 150ms;
+ }
+
+ .form-agreement-link {
+    color: #4D5AE5;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: -0.04em;
+        text-decoration-line: underline;
+ }
