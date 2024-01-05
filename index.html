@@ -582,26 +582,26 @@
           </div>
 
           <div class="field-textarea">
-            <label class="form-label" for="user_comment">Comment</label
+            <label class="form-label" for="user-comment">Comment</label
             ><textarea
               class="form-comment"
-              name="user_comment"
-              id="user_comment"
+              name="user-comment"
+              id="user-comment"
               rows="7"
               placeholder="Text input"
             ></textarea>
           </div>
 
           <div class="checkbox-wrapper">
-            <label class="form-agreement">
-              <input
-                class="checkbox visually-hidden"
-                id="user-privacy"
-                type="checkbox"
-                name="user-privacy"
-                value="true"
-                checked
-              />
+            <input
+              class="checkbox visually-hidden"
+              id="user-privacy"
+              type="checkbox"
+              name="user-privacy"
+              value="true"
+              checked
+            />
+            <label class="form-agreement" for="user-privacy">
               <span class="form-agreement-checkbox">
                 <svg class="form-agreement-icon" width="10" height="8">
                   <use href="./images/icons.svg#icon-tick"></use>
@@ -610,8 +610,8 @@
               I accept the terms and conditions of the
               <a class="form-agreement-link" href="">Privacy Policy</a>
             </label>
-            <button class="form-btn" type="submit">Send</button>
           </div>
+          <button class="form-btn" type="submit">Send</button>
         </form>
       </div>
     </div>
