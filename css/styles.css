@@ -557,6 +557,7 @@ footer .social-icon{
         font-size: 16px;
         font-style: normal;
         line-height: 24px;
+        font-weight: 500;
         letter-spacing: 0.32px;
         outline: none;
         margin-bottom: 16px;
@@ -583,9 +584,13 @@ footer .social-icon{
         background-color: transparent;
         outline: transparent;
         padding: 8px 16px;
+        font-size: 12px;
+        line-height: 2;
+        letter-spacing: 0.04em;
+        color: #ffffff;
 }
 .subscribe-form-input::placeholder{
-    color: #FFF;
+    color: #ffffff;
 }
 
 .subscribe-btn {
@@ -593,6 +598,7 @@ footer .social-icon{
     align-items: center;
     justify-content: center;
     border: none;
+    font-weight: 500;
 
     gap: 16px;
     min-width: 165px;
@@ -602,12 +608,13 @@ footer .social-icon{
     color: #FFF;
     outline: none;
     line-height: 24px;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.04em;
     border-radius: 4px;
 
     background: #4D5AE5;     
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    margin-left: 24px;   
+    margin-left: 24px; 
+    cursor: pointer;  
 }
 .subscribe-btn:hover,
 .subscribe-btn:focus{
@@ -616,6 +623,7 @@ footer .social-icon{
 
 .subscribe-icon {
     fill: #ffffff;
+    margin-left: 16px;
 }
 
 
