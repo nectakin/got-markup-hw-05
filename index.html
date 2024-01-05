@@ -491,24 +491,27 @@
         </div>
         <div class="footer-form">
           <p class="footer-cap">Subscribe</p>
-          <ul class="footer-menu">
-            <form class="form-subscribe">
-              <label class="subscribe-form-field">
-                <input
-                  class="subscribe-form-input"
-                  type="email"
-                  placeholder="E-mail"
-                />
-              </label>
-              <button class="subscribe-btn" type="submit">
-                Subscribe
-
-                <svg class="subscribe-icon" width="24" height="24">
-                  <use href="./images/icons.svg#icon-send"></use>
-                </svg>
-              </button>
-            </form>
-          </ul>
+          <form class="form-subscribe">
+            <ul class="footer-menu">
+              <li class="subscribe-form-field">
+                <label>
+                  <input
+                    class="subscribe-form-input"
+                    type="email"
+                    placeholder="E-mail"
+                  />
+                </label>
+              </li>
+              <li>
+                <button class="subscribe-btn" type="submit">
+                  Subscribe
+                  <svg class="subscribe-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-send"></use>
+                  </svg>
+                </button>
+              </li>
+            </ul>
+          </form>
         </div>
       </div>
     </footer>
@@ -516,7 +519,7 @@
     <div class="backdrop is-open">
       <div class="modal">
         <button class="modal-btn" type="button" aria-label="Modal close button">
-          <svg class="modal-btn-icon" width="8px" height="8px">
+          <svg class="modal-btn-icon" width="8" height="8">
             <use href="./images/icons.svg#icon-cross"></use>
           </svg>
         </button>
@@ -529,13 +532,13 @@
           method="post"
         >
           <div class="field">
-            <label class="form-label" for="user_name">Name</label>
+            <label class="form-label" for="user-name">Name</label>
 
             <div class="form-field">
               <input
                 class="form-input"
-                id="user_name"
-                name="user_name"
+                id="user-name"
+                name="user-name"
                 type="text"
                 required
               />
